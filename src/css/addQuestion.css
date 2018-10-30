@@ -1,0 +1,44 @@
+.add-question-container{
+    width: 50%;
+    border-radius: 4px;
+    background-color: rgba(136, 136, 136, 0.171);
+    padding: 12px;
+    margin: 32px auto;
+    text-align: center;
+}
+
+.add-form-question-btn{
+    background-color: #0D717D;
+    font-size: 1em;
+    font-weight: 400;
+    color: rgb(214, 214, 214);
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    margin: 12px;
+}
+
+.add-question-input{
+    border: 1px solid rgba(0, 0, 0, 0.281);
+    border-radius: 4px;
+}
+
+.add-form-question-btn:hover{
+    cursor: pointer;
+    color: white;
+}
+
+.add-form-question-btn-disabled{
+    background-color: #0D717D;
+    font-size: 1em;
+    font-weight: 400;
+    color: rgb(214, 214, 214);
+    border: none;
+    border-radius: 8px;
+    padding: 4px 12px;
+    margin: 12px;
+}
+
+.add-question-successful-text{
+    color: green;
+}

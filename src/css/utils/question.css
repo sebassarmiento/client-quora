@@ -1,0 +1,33 @@
+.question-container{
+    background-color: rgb(240, 240, 240);
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.308);
+    display: block;
+    margin: 12px;
+    padding: 12px;
+}
+
+.question-title{
+    margin: 0;
+    margin-top: 8px;
+    font-size: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.question-date{
+    font-size: 0.8em;
+    display: inline;
+    float: right;
+}
+
+.question-category{
+    background-color: rgba(0, 0, 0, 0.377);
+    border-radius: 6px;
+    padding: 4px;
+    display: inline;
+}
+
+.question-username{
+    text-align: right;
+    margin: 0;
+}

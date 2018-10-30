@@ -1,0 +1,22 @@
+.feed-main-container{
+    display: flex;
+    margin: 24px auto;
+}
+
+.feed-questions-category{
+    background-color: red;
+    flex: 1;
+    margin: 12px;
+    padding: 12px;
+    max-height: 100vh;
+}
+
+.feed-questions-container{
+    margin: 12px;
+    background-color: blue;
+    flex: 4;
+}
+
+.feed-third-container{
+    flex: 1;
+}

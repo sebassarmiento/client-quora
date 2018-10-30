@@ -1,28 +1,41 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom';
+import SignUp from './components/signUp';
+import Feed from './components/feed';
+import NavBar from './utils/NavBar';
+import { connect } from 'react-redux';
+import Login from './components/login';
+import AddQuestion from './components/addQuestion';
+import Redirect from './utils/Redirect';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        {this.props.logged ?
+          <BrowserRouter>
+            <div>
+              <NavBar />
+              <Route path="/" exact component={Feed} />
+              <Route path="/add-question" component={AddQuestion} />
+            </div>
+          </BrowserRouter> :
+          <BrowserRouter>
+            <div>
+              <Route path="/" exact component={Login} />
+              <Route path="/signup" component={SignUp} />
+              <Route component={Redirect} />
+            </div>
+          </BrowserRouter>}
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    logged: state.logged
+  }
+}
+
+export default connect(mapStateToProps)(App);
